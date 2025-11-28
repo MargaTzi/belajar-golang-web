@@ -9,7 +9,8 @@ import (
 
 func TestHander(t *testing.T){
 	var handler http.HandlerFunc = func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "Hello World!!")
+		fmt.Fprint(w, "Halo, ini method: ", r.Method)
+		fmt.Fprintln(w, "Dan path: ", r.RequestURI)
 	}
 
 	server := http.Server{
