@@ -34,7 +34,7 @@ func LoginForm(w http.ResponseWriter, r *http.Request){
 }
 
 func TestLoginForm(t *testing.T) {
-	requestBody := strings.NewReader("username=dito&password=")
+	requestBody := strings.NewReader("username=&password=123")
 	request := httptest.NewRequest("POST", "http://localhost/", requestBody)
 	request.Header.Add("Content-Type", "application/x-www-form-urlencoded") 
 	recorder := httptest.NewRecorder()
