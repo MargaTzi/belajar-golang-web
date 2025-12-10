@@ -1,0 +1,11 @@
+<body>
+{{if ge .score 80}}
+    <h1>A</h1>
+    {{else if ge .score 70}}
+    <h1>B</h1>
+    {{else if ge .score 60}}
+    <h1>C</h1>
+{{else}}
+<h1>D</h1>
+{{end}}
+</body>

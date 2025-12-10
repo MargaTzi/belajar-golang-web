@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Produk: {{.Produk}}</h1>
+
+{{with .Details}}
+    <p>Price: {{.Price}}</p>
+    <p>Stock: {{.Stok}}</p>
+{{else}}
+    <p>No product details available</p>
+{{end}}
+
+</body>
+</html>
